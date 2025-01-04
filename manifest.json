@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "NoShort",
+  "version": "0.1",
+
+  "description": "Hides shorts on YouTube to remove short-form brainrot to allow focus and concentration",
+  "homepage_url": "https://github.com/debankle/noshort",
+  "icons": {
+    "48": "icons/noshort-48.png"
+  },
+
+  "permissions": ["activeTab", "storage"],
+
+  "browser_action": {
+    "default_icon": "icons/noshort-32.png",
+    "default_title": "NoShort",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content_scripts/noshort.js"]
+    }
+  ]
+}
