@@ -1,6 +1,6 @@
 # NoShort Firefox Extension
 
-Disableds YouTube Shorts on the home page
+A firefox extensions that can disable YouTube Shorts on the home page to avoid getting distracted by garbage short form brainrot. Works, but is not pretty and is a miracle that it does at all. I have no idea what I'm doing with extensions or blocking youtube content lol.
 
 ## Plans
 
