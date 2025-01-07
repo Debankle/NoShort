@@ -4,8 +4,10 @@
     const popupContent = document.querySelector("#popup-content");
     const errorContent = document.querySelector("#error-content");
     const toggleSlider = document.querySelector("#toggle-slider");
+    const popupText = document.querySelector("#popup-status");
 
     function updateToggleState(noshortEnabled) {
+        popupText.textContent = noshortEnabled ? "NoShort is On!" : "NoShort is Off";
         if (noshortEnabled) {
             toggleSlider.classList.add("on");
             toggleSlider.classList.remove("off");

@@ -2,32 +2,51 @@
     let noshortEnabled = false;
 
     function toggleShortsVisibility(enabled) {
-        const shorts = document.querySelectorAll('ytd-reel-shelf-renderer');
+        const shorts = getAllShorts();
+        if (enabled) {
+            hideElements(shorts);
+            console.log("Hiding YouTube Shorts...");
+        } else {
+            showElements(shorts);
+            console.log("Showing YouTube Shorts...");
+        }
+    }
 
-        shorts.forEach(short => {
-            if (enabled) {
-                short.style.display = 'none';
-            } else {
-                short.style.display = '';
-            }
+    function getAllShorts() {
+        const selectors = [
+            'ytd-rich-shelf-renderer',
+            'ytd-reel-shelf-renderer',
+            'ytd-compact-video-renderer',
+        ];
+
+        return selectors.reduce((acc, selector) => {
+            const elements = document.querySelectorAll(selector);
+            return acc.concat(Array.from(elements));
+        }, []);
+    }
+
+    function hideElements(elements) {
+        elements.forEach(element => {
+            element.style.display = 'none';
+        });
+    }
+
+    function showElements(elements) {
+        elements.forEach(element => {
+            element.style.display = '';
         });
     }
 
     function checkShortsState() {
         browser.storage.local.get("noshortEnabled").then((result) => {
             noshortEnabled = result.noshortEnabled;
-
-            if (noshortEnabled) {
-                console.log("Hiding YouTube Shorts...");
-                toggleShortsVisibility(true);
-            } else {
-                console.log("Showing YouTube Shorts...");
-                toggleShortsVisibility(false);
-            }
-        })
+            toggleShortsVisibility(noshortEnabled);
+        });
     }
 
     checkShortsState();
+
+    window.addEventListener('yt-navigate-finish', checkShortsState);
 
     browser.runtime.onMessage.addListener((message) => {
         if (message.command === "toggle-feature") {
