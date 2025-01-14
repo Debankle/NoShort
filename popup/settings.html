@@ -6,7 +6,26 @@
         <title>NoShort</title>
     </head>
     <body>
-        <p>Settings lol</p>
-        <a href="popup.html"><button>Back</button></a>
+        <div class="header">
+            <a href="popup.html" id="back-link">
+                <button id="back-button">Back</button>
+            </a>
+            <h4>Settings</h4>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="all">
+            <label for="all">Block All</label>
+            <br>
+            <input type="checkbox" id="home-page">
+            <label for="home-page">Block on home page</label>
+            <br>
+            <input type="checkbox" id="search-page">
+            <label for="search-page">Block on search results</label>
+            <br>
+            <input type="checkbox" id="suggested-page">
+            <label for="suggested-page">Block on suggested next</label>
+        </div>
+        <script src="settings.js"></script>
     </body>
 </html>

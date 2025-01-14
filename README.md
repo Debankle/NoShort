@@ -9,9 +9,5 @@ Design some proper icons
 Provide options for control
 - whitelist
 - blacklist
-- home page only
-- block in search
-- block in channel
-- block on reccomended
-
-Improve styling
+- improve on how each view is blocked
+- Improve styling (create a theme thats not white with black text)

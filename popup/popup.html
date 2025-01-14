@@ -6,11 +6,14 @@
     <title>NoShort</title>
 </head>
 <body>
-    <a href="settings.html" id="settings-link">
-        <button id="settings-button">
-            <img src="images/settings.png" alt="Googoo" />
-        </button>
-    </a>
+    <div class="header">
+        <a href="settings.html" id="settings-link">
+            <button id="settings-button">
+                <img src="../images/settings.png" alt="Settings Icon" />
+            </button>
+        </a>
+        <h4>NoShort</h4>
+    </div>
     <div id="popup-content" class="hidden">
         <p id="popup-status">NoShort is off</p>
         <div id="toggle-slider" class="toggle-slider off">
@@ -20,7 +23,6 @@
     <div id="error-content" class="hidden">
         <p>NoShort works only on YouTube.</p>
     </div>
-    <img src="images/settings.png" />
     <script src="popup.js"></script>
 </body>
 </html>

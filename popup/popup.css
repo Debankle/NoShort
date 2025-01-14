@@ -1,10 +1,60 @@
 html,
 body {
-  width: 100px;
+  width: 200px;
 }
 
 .hidden {
   display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h4 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#settings-link {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#settings-button img {
+  width: 24px;
+  height: 24px;
+}
+
+#back-link {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#back-button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 #toggle-slider {

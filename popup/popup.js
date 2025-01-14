@@ -1,4 +1,4 @@
-(function () {
+(() => {
     console.log("popup script loaded");
 
     const popupContent = document.querySelector("#popup-content");
