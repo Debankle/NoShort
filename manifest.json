@@ -9,6 +9,8 @@
     "48": "icons/noshort-48.png"
   },
 
+  "web_accessible_resources": ["images/settings.png"],
+
   "permissions": ["activeTab", "storage"],
 
   "browser_action": {
